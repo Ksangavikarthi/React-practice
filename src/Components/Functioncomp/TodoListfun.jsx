@@ -45,7 +45,7 @@ export default function TodoListfun() {
             <br />
             {todolist.map((list, i) => (
                 <div key={i} className="lists">
-                    <input type="checkbox"/>
+                    <input type="checkbox" />
                     <span className="items">{list.task}</span>
                     <button className="update" onClick={() => handleupdate(i)}>update</button>
                     <button className="delete" onClick={() => handledelete(list.id)}>delete</button>

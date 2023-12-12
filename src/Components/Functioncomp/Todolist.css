@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-image:url();
+}
+#project{
+
+    height:auto;
+    width:35%;
+    margin:10rem 30rem;
+    text-align: center;
+}
+.inputbox{
+    display: flex;
+    justify-content: center;
+   
+}
+.btn{
+    color: blue;
+    background-color:rgb(254, 254, 255); 
+    /* display: flex;
+    flex-direction: column; */
+}
+

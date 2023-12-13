@@ -23,6 +23,8 @@ export default function TodoListfun() {
     }
     const handlechange = () => {
         settodolist([...todolist, { id: uuidver, task: data }])
+        setdata("")
+
     }
 
     const handledelete = (deleteid) => {
@@ -36,21 +38,21 @@ export default function TodoListfun() {
         settodolist(copy)
     }
     return (
-        <div id="project">
-            <h1 id='head'>DAILY WORK </h1>
-            <div className="inputbox">
-                <input className='input' type="text" placeholder="Tasks" onChange={(e) => handle(e)} />
-                <button className="bt" onClick={handlechange}>Add task</button>
+        <div className='container'>
+            <h1 >DAILY WORK </h1>
+            <br /> <br />
+            <div className="task-text">
+                <input value={data} type="text" placeholder="Tasks" onChange={(e) => handle(e)} />
+                <button className="add" onClick={handlechange}>Add task</button>
+                {todolist.map((list, i) => (
+                    <div key={i}>
+                        <span className="items">{list.task}</span>
+                        <div className='button-container'></div>
+                        <button className="up" onClick={() => handleupdate(i)}>update</button>
+                        <button className="del" onClick={() => handledelete(list.id)}>delete</button>
+                    </div>
+                ))}
             </div>
-            <br />
-            {todolist.map((list, i) => (
-                <div key={i} className="lists">
-                    <input type="checkbox" />
-                    <span className="items">{list.task}</span>
-                    <button className="update" onClick={() => handleupdate(i)}>update</button>
-                    <button className="delete" onClick={() => handledelete(list.id)}>delete</button>
-                </div>
-            ))}
         </div>
     )
 }

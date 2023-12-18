@@ -40,17 +40,17 @@ export default function TodoListfun() {
     return (
         <div className='container'>
             <h1 >DAILY WORK </h1>
-            <br /> <br />
+            <br /> 
             <div className="task-text">
                 <input value={data} type="text" placeholder="Tasks" onChange={(e) => handle(e)} />
                 <button className="add" onClick={handlechange}>Add task</button>
                 {todolist.map((list, i) => (
-                    <div key={i}>
+                    <div key={i} className="task">
                         <span className="items">{list.task}</span>
-                        <div className='button-container'></div>
+                        <div className='button-container'>
                         <button className="up" onClick={() => handleupdate(i)}>update</button>
                         <button className="del" onClick={() => handledelete(list.id)}>delete</button>
-                    </div>
+                    </div></div>
                 ))}
             </div>
         </div>

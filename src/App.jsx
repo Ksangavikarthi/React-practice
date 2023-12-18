@@ -21,6 +21,8 @@ import Reacthookform from './Components/Functioncomp/Reacthookform'
 import YupValid from './Components/Functioncomp/YupValid'
 import TodoListfun from './Components/Functioncomp/TodoListfun'
 import Axiostodolistfun from './Components/Functioncomp/Axiostodolistfun'
+import Propsdrilling from './Components/Functioncomp/Propsdrilling'
+
 
 function App() {
 //   const [tr, settr] = useState(true)
@@ -50,10 +52,14 @@ function App() {
     {/* <Reactform/> */}
     {/* <YupValid/> */}
     {/* <Reacthookform/> */}
-    <TodoListfun/>
+    {/* <TodoListfun/> */}
     {/* <Axiostodolistfun/> */}
     {/* {tr && <Lifecyclefun/>} 
     <button onClick={test}>click</button> */}
+    <Propsdrilling/>
+
+
+
  
     </>
   )
